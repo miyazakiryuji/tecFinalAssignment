@@ -1,0 +1,1498 @@
+@charset "UTF-8";
+
+/* ベースのスタイル
+------------------------------------------ */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.75;
+    color: #000;
+    background-color: #fff;
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 1.25rem;
+    }
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a,
+a:hover,
+a i {
+    transition: all 0.3s;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    border-style: none;
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+
+/* 部品
+------------------------------------------ */
+
+/* flexbox */
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Outfitフォント */
+.outfit {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.5rem;
+}
+
+/* ボタン */
+.button {
+    position: relative;
+    display: block;
+    color: #fff;
+    text-align: center;
+    border-radius: 1.875rem;
+}
+
+.button-icon {
+    position: absolute;
+    top: 47%;
+    right: 0.6rem;
+    font-size: 2rem;
+    line-height: 1;
+    transform: translate(0%, -50%);
+}
+
+/* ピンクボタン */
+.button-pink {
+    background-color: #f11f8d;
+    font-size: 1.25rem;
+    margin: 0 3.45rem;
+    padding: 0.75rem 0;
+}
+
+/* ピンクボタンの矢印 */
+.button-pink .bi-arrow-right-short {
+    right: 1rem;
+    top: 1.8rem;
+}
+
+/* ホワイトボタン */
+.button-white {
+    background-color: #fff;
+    font-size: 1.25rem;
+    margin-top: 0.337rem;
+    margin-right: 2.3rem;
+    margin-left: 2.3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.8rem;
+    border: 0.15rem solid;
+    border-color: #f11f8d;
+}
+
+
+
+/* 要約 */
+.summary .container {
+    margin-top: 5rem;
+    padding-bottom: 2rem;
+    padding-top: 1.4rem;
+
+}
+
+.summary-text {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 1.3rem;
+    padding-right: 0.3rem;
+}
+
+@media(min-width:768px) {
+    .summary .container {
+        margin-top: 3.6rem;
+    }
+
+    .summary-text {
+        text-align: center;
+        font-size: 1.875rem;
+        margin-bottom: 1rem;
+    }
+}
+
+
+/* フォント */
+/* 黒 */
+.font-color-black {
+    font-size: 1.25rem;
+    color: #000000;
+}
+
+/* オレンジ */
+.font-color-orange {
+    font-size: 1.5rem;
+    color: #f26618;
+}
+
+/* 緑 */
+.font-color-green {
+    font-size: 1.5rem;
+    color: #46c017;
+}
+
+/* ピンク */
+.font-color-pink {
+    font-size: 1.25rem;
+    color: #f11f8d;
+}
+
+/* 黄 */
+.font-color-yellow {
+    font-size: 1.25rem;
+    color: #f2a118;
+}
+
+/* 青 */
+.font-color-blue {
+    font-size: 1rem;
+    color: #0079f2;
+}
+
+/* バックグラウンドカラー　blue */
+.background-blue {
+    background-color: #f2f8fe;
+}
+
+/* セクションごとのタイトルフォーマット */
+.section-title {
+    position: relative;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -0.6rem;
+    /*線の上下位置*/
+    display: inline-block;
+    width: 1.47rem;
+    /*線の長さ*/
+    height: 0.16rem;
+    /*線の太さ*/
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    /*位置調整*/
+    background-color: #0079f2;
+    /*線の色*/
+}
+
+/* ヘッダー
+------------------------------------------ */
+/* ヘッダー */
+.header {
+    position: fixed;
+    z-index: 1;
+    top: 0.5rem;
+    right: 0.5rem;
+    left: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #0079f2;
+    color: #ffffff;
+    border-radius: 2.0625rem;
+    font-size: 1.125rem;
+    padding-left: 1rem;
+    align-items: center;
+}
+
+@media(min-width:768px) {
+    .header {
+        top: 1rem;
+        padding: 0.3rem 0 0.3rem 1.5rem;
+        border-radius: 3rem;
+        
+    }
+}
+
+/* ヘッダーロゴのサイズ */
+@media(max-width:767.9px){
+    .header .header-logo img{
+        width: 82%;
+    }
+}
+
+
+
+.header h1 {
+    line-height: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0.92rem;
+}
+@media(min-width:768px){
+    .header h1{
+        margin-top: 0.9rem;
+        margin-bottom: 1.03rem;
+    }
+}
+
+.header h1 span {
+    letter-spacing: normal;
+    font-size: 0.625rem;
+    font-weight: normal;
+}
+
+
+/* ハンバーガーボタン */
+.hamburger-button {
+    position: fixed;
+    top: 0.59rem;
+    right: 2.28rem;
+    z-index: 1;
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+/* ハンバーガーボタン  ピンクボタン　SNSボタン削除*/
+@media(min-width:768px) {
+    .hamburger-button {
+        display: none;
+    }
+
+    .header .button-pink {
+        display: none;
+    }
+
+    .header .hamburger-menu-sns-list-group {
+        display: none;
+    }
+}
+
+@media (max-width: 767.9px) {
+
+    /* ハンバーガーメニュー */
+    .hamburger-menu {
+        position: fixed;
+        top: 5.3rem;
+        bottom: 12rem;
+        left: 0.9rem;
+        z-index: 1;
+        width: 23.375rem;
+        height: 32.6875rem;
+        background-color: #0079f2;
+        transition: opacity .3s linear;
+        opacity: 0;
+        visibility: hidden;
+        border-radius: 1.99rem;
+        padding-top: 2.5rem;
+    }
+}
+
+/* スライドイン後の位置の指定 */
+.hamburger-menu-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hamburger-menu-list {
+    padding: 5rem 1.25rem;
+    list-style: none;
+}
+
+/* リストの見た目 */
+@media (max-width: 767.9px) {
+    .hamburger-menu-list-group {
+        font-size: 1.125rem;
+        display: block;
+    }
+
+    .hamburger-menu-list-group li {
+        margin-bottom: 1.65rem;
+        text-align: center;
+        padding-right: 1rem;
+    }
+
+    .header .button-pink {
+        margin-top: 2.1rem;
+        padding: 0.77rem 0;
+        width: 17.4rem;
+        margin-left: 2.6rem;
+    }
+}
+
+@media(min-width:768px) {
+    .hamburger-menu-list-group {
+        font-size: 0.9375rem;
+    }
+
+    .hamburger-menu-list-item:not(:last-child) {
+        margin-right: 2.3rem;
+        padding-bottom: 0.2rem;
+    }
+
+    .hamburger-menu-list-item:last-child {
+        margin-right: 2.5rem;
+        padding-bottom: 0.2rem;
+    }
+
+}
+
+/* SNSリストの見た目 */
+.hamburger-menu-sns-list-group {
+    margin-top: 2.1rem;
+    justify-content: flex-start;
+    margin-left: 3.5rem;
+}
+
+.header-sns-list-item:not(:last-child) {
+    margin-right: 2.5rem;
+}
+
+.header-sns-list-item {
+    font-size: 2rem;
+}
+
+.hamburger-menu-list-group a {
+    color: #ffffff;
+}
+
+.hamburger-menu-sns-list-group a {
+    color: #ffffff;
+}
+
+/* カバー
+------------------------------------------ */
+
+.cover {
+    position: relative;
+}
+
+.cover-slick-item {
+    text-align: right;
+}
+
+@media (max-width: 767.9px) {
+    .cover-slick-item img {
+        width: 92.8%;
+        height: auto;
+        margin-left: auto;
+        border-bottom-left-radius: 6.25rem;
+    }
+}
+
+@media(min-width:768px) {
+    .cover-slick-item img {
+        width: 82.7%;
+        height: auto;
+        margin-left: auto;
+        border-bottom-left-radius: 9.4rem;
+    }
+}
+
+.cover-catch {
+    position: relative;
+}
+
+.cover-title {
+    position: absolute;
+}
+
+/* 上部カバータイトルの設定-サイズ・位置 */
+.cover-title-first {
+    bottom: 4.37rem;
+    width: 13.7rem;
+    height: 3.35rem;
+    left: 1.08rem;
+    text-align: center;
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+    opacity: 80%;
+    background-color: #fff;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+@media(min-width:768px) {
+    .cover-title-first {
+        bottom: 14rem;
+        width: 22rem;
+        left: 9.4rem;
+        height: 5.45rem;
+    }
+}
+/* 下部カバータイトルの設定-サイズ・位置 */
+.cover-title-second {
+    bottom: 0.49rem;
+    left: 2rem;
+    height: 3.35rem;
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.4rem;
+    padding-right: 1.1rem;
+    padding-left: 0.71rem;
+    background-color: #fff;
+    opacity: 80%;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+@media (min-width: 768px){
+    .cover-title-second {
+        bottom: 7.5rem;
+        left: 10.4rem;
+        height: 5.5rem;
+        padding-left: 0rem;
+        padding-right: 1.47rem;
+    }
+}
+
+/* カバータイトルの文字設定-一枚目上部 */
+.cover-slick-item:nth-child(1) .cover-title-first .whole-sentence-first {
+    font-size: 1.25rem;
+    color: #f2a118;
+}
+
+.cover-slick-item:nth-child(1) .cover-title-first .part-of-sentence-first {
+    font-size: 1.5rem;
+}
+
+.cover-slick-item:nth-child(1) .cover-title-first .whole-sentence-second {
+    font-size: 1.25rem;
+    color: #46c017;
+}
+
+.cover-slick-item:nth-child(1) .cover-title-first .part-of-sentence-second {
+    font-size: 1.5rem;
+}
+
+@media(min-width:768px) {
+    .cover-slick-item:nth-child(1) .cover-title-first .whole-sentence-first {
+        font-size: 2.375rem;
+    }
+
+    .cover-slick-item:nth-child(1) .cover-title-first .part-of-sentence-first {
+        font-size: 2.75rem;
+    }
+
+    .cover-slick-item:nth-child(1) .cover-title-first .whole-sentence-second {
+        font-size: 2.375rem;
+    }
+
+    .cover-slick-item:nth-child(1) .cover-title-first .part-of-sentence-second {
+        font-size: 2.75rem;
+    }
+}
+
+/* カバータイトルの文字設定-一枚目下部 */
+.cover-slick-item:nth-child(1) .cover-title-second .whole-sentence-first {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #f26618;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cover-slick-item:nth-child(1) .cover-title-second .whole-sentence-second {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media(min-width:768px) {
+    .cover-slick-item:nth-child(1) .cover-title-second .whole-sentence-first {
+        font-size: 2.25rem;
+    }
+
+    .cover-slick-item:nth-child(1) .cover-title-second .whole-sentence-second {
+        font-size: 2.25rem;
+    }
+}
+
+/* カバータイトルの文字設定-2枚目上部 */
+.cover-slick-item:nth-child(2) .cover-title-first .whole-sentence-first {
+    font-size: 1.25rem;
+}
+
+.cover-slick-item:nth-child(2) .cover-title-first .whole-sentence-second {
+    font-size: 1.5rem;
+}
+
+/* カバータイトルの文字設定-2枚目下部 */
+.cover-slick-item:nth-child(2) .cover-title-second .whole-sentence-first {
+    font-size: 1.5rem;
+}
+
+.cover-slick-item:nth-child(2) .cover-title-second .whole-sentence-second {
+    font-size: 1.25rem;
+}
+
+@media(min-width:768px) {
+
+    /* カバータイトルの文字設定-2枚目上部 */
+    .cover-slick-item:nth-child(2) .cover-title-first .whole-sentence-first {
+        font-size: 2.25rem;
+    }
+
+    .cover-slick-item:nth-child(2) .cover-title-first .whole-sentence-second {
+        font-size: 2.75rem;
+    }
+
+    /* カバータイトルの文字設定-2枚目下部 */
+    .cover-slick-item:nth-child(2) .cover-title-second .whole-sentence-first {
+        font-size: 2.75rem;
+    }
+
+    .cover-slick-item:nth-child(2) .cover-title-second .whole-sentence-second {
+        font-size: 2.25rem;
+    }
+}
+
+/* カバータイトルの文字設定-3枚目上部 */
+.cover-slick-item:nth-child(3) .cover-title-first .whole-sentence-first {
+    font-size: 1.5rem;
+}
+
+.cover-slick-item:nth-child(3) .cover-title-first .whole-sentence-second {
+    font-size: 1.25rem;
+}
+
+/* カバータイトルの文字設定-3枚目下部 */
+.cover-slick-item:nth-child(3) .cover-title-second .whole-sentence-first {
+    font-size: 1.5rem;
+}
+
+.cover-slick-item:nth-child(3) .cover-title-second .whole-sentence-second {
+    font-size: 1.5rem;
+}
+
+@media(min-width:768px) {
+
+    /* カバータイトルの文字設定-3枚目上部 */
+    .cover-slick-item:nth-child(3) .cover-title-first .whole-sentence-first {
+        font-size: 2.75rem;
+    }
+
+    .cover-slick-item:nth-child(3) .cover-title-first .whole-sentence-second {
+        font-size: 2.25rem;
+    }
+
+    /* カバータイトルの文字設定-3枚目下部 */
+    .cover-slick-item:nth-child(3) .cover-title-second .whole-sentence-first {
+        font-size: 2.75rem;
+    }
+
+    .cover-slick-item:nth-child(3) .cover-title-second .whole-sentence-second {
+        font-size: 2.75rem;
+    }
+}
+
+/* カバータイトルの文字設定-4枚目上部 */
+.cover-slick-item:nth-child(4) .cover-title-first .whole-sentence-first {
+    font-size: 1.5rem;
+}
+
+.cover-slick-item:nth-child(4) .cover-title-first .whole-sentence-second {
+    font-size: 1.25rem;
+}
+
+/* カバータイトルの文字設定-4枚目下部 */
+.cover-slick-item:nth-child(4) .cover-title-second .whole-sentence-first {
+    font-size: 1.5rem;
+}
+
+.cover-slick-item:nth-child(4) .cover-title-second .whole-sentence-second {
+    font-size: 1.25rem;
+}
+
+@media(min-width:768px) {
+
+    /* カバータイトルの文字設定-4枚目上部 */
+    .cover-slick-item:nth-child(4) .cover-title-first .whole-sentence-first {
+        font-size: 2.75rem;
+    }
+
+    .cover-slick-item:nth-child(4) .cover-title-first .whole-sentence-second {
+        font-size: 2.25rem;
+    }
+
+    /* カバータイトルの文字設定-4枚目下部 */
+    .cover-slick-item:nth-child(4) .cover-title-second .whole-sentence-first {
+        font-size: 2.75rem;
+    }
+
+    .cover-slick-item:nth-child(4) .cover-title-second .whole-sentence-second {
+        font-size: 2.25rem;
+    }
+}
+
+/* カバータイトルの文字設定-5枚目上部 */
+.cover-slick-item:nth-child(5) .cover-title-first .whole-sentence-first {
+    font-size: 1.5rem;
+}
+
+.cover-slick-item:nth-child(5) .cover-title-first .whole-sentence-second {
+    font-size: 1.25rem;
+}
+
+/* カバータイトルの文字設定-5枚目下部 */
+.cover-slick-item:nth-child(5) .cover-title-second .whole-sentence-first {
+    font-size: 1.5rem;
+}
+
+.cover-slick-item:nth-child(5) .cover-title-second .whole-sentence-second {
+    font-size: 1.25rem;
+}
+
+@media(min-width:768px) {
+    .cover-slick-item:nth-child(5) .cover-title-first .whole-sentence-first {
+        font-size: 2.75rem;
+    }
+
+    .cover-slick-item:nth-child(5) .cover-title-first .whole-sentence-second {
+        font-size: 2.25rem;
+    }
+
+    /* カバータイトルの文字設定-5枚目下部 */
+    .cover-slick-item:nth-child(5) .cover-title-second .whole-sentence-first {
+        font-size: 2.75rem;
+    }
+
+    .cover-slick-item:nth-child(5) .cover-title-second .whole-sentence-second {
+        font-size: 2.25rem;
+    }
+}
+
+
+
+/* スリックドットの編集 */
+.slick-dots {
+    bottom: -2rem !important;
+}
+@media(min-width:768px){
+    .slick-dots{
+        text-align: right!important;
+        top: 47rem!important;
+    }
+}
+@media(min-width:768px) {
+    .cover .slogan .button-pink {
+        width: 19.9rem;
+        margin-top: 1.59rem;
+        margin-left: 38.06rem;
+        padding-top: 0.55rem;
+        padding-bottom: 0.96rem;
+    }
+
+    .cover .slogan .button-pink .bi-arrow-right-short {
+        top: 1.8rem;
+    }
+}
+
+/* 要約-cover */
+.cover .slogan .container {
+    margin-top: 3.45rem;
+}
+
+.cover .slogan-text {
+    text-align: center;
+    font-size: 1.125rem;
+    margin-bottom: 1.1rem;
+}
+
+@media(min-width:768px) {
+    .cover .slogan .container {
+        margin-top: 3.6rem;
+    }
+
+    .cover .slogan-text {
+        text-align: center;
+        font-size: 1.875rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* キャンペーン
+------------------------------------------ */
+.campagin .container {
+    display: flex;
+    flex-flow: column;
+    background-color: #f2f8fe;
+    padding: 2rem 0;
+    margin-top: 2.55rem;
+}
+
+@media(min-width:768px) {
+    .campagin .container {
+        margin-top: 4.45rem;
+        padding-top: 4rem;
+        padding-left: 18rem;
+        padding-bottom: 3.5rem;
+        flex-flow: row;
+    }
+}
+
+.campagin .ranking {
+    display: flex;
+}
+
+/* キャンペーン上部 */
+.campagin-top .right {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-left: 0.2rem;
+}
+
+.campagin-top .right .text {
+    display: flex;
+    flex-flow: column;
+}
+
+@media(min-width:768px) {
+    .campagin-top .right .text {
+        width: 8rem;
+    }
+}
+
+.campagin-top .left {
+    display: flex;
+    text-align: center;
+    justify-content: start;
+}
+
+.campagin-top .left .text {
+    display: flex;
+    flex-flow: column;
+}
+
+/* キャンペーン上部-文字 */
+.campagin .description {
+    font-size: 0.8125rem;
+}
+@media(min-width:768px){
+    .campagin .description {
+        font-size: 1.25rem;
+        line-height: 1;
+        margin-top: 0.2rem;
+    }
+}
+/* キャンペーン上部-2021年度 */
+.campagin .description .year {
+    font-size: 0.75rem;
+    margin-top:0.1rem;
+}
+@media(min-width:768px){
+    .campagin .description .year{
+        font-size: 1rem;
+    }
+    /* 左 */
+    .campagin .description .classroom-year {
+        padding-left: 0.7rem;
+    }
+    /* 右 */
+    @media(min-width: 768px){
+        .campagin .description .lessons-year{
+            padding-left: 0rem;
+        }
+    }
+}
+/* キャンペーン上部-オンライン */
+/* 習い事 */
+.campagin .description .lessons-online{
+    
+}
+@media(min-width:768px){
+    /* 左 */
+    .campagin .description .classroom-online {
+        padding-top: 0.8rem;
+        padding-left: 0.5rem;
+    }
+    /* 右 */
+    .campagin .description .lessons-online{
+        margin-top: 0.78rem;
+    }
+}
+/* キャンペーン上部-ランキング */
+
+/* 右-習い事 */
+.campagin .description .lessons-ranking{
+   
+}
+
+@media(min-width: 768px){
+    /* 左-教室 */
+    .campagin .description .classroom-ranking{
+        padding-top: 0.94rem;
+        padding-right: 1.2rem;
+        white-space: nowrap
+    }
+    /* 右-習い事 */
+    .campagin .description .lessons-ranking{
+        padding-top: 0.91rem;
+        white-space: nowrap;
+    }
+}
+
+
+.campagin .annotation {
+    text-align: center;
+    font-size: 0.73rem;
+    padding-top: 0.64rem;
+    padding-right: 0.1rem;
+}
+@media(min-width:768px) {
+    .campagin .annotation {
+        text-align: left;
+        font-size: 0.75rem;
+        padding-top: 1rem;
+        padding-left: 1.3rem;
+    }
+}
+
+/* キャンペーン上部-文字-No1 */
+.campagin .no1 {
+    font-size: 2rem;
+    padding-top: 0.2rem;
+    padding-right: 0.1rem;
+    line-height: 0;
+    margin-top: 1rem;
+    vertical-align: top;
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+}
+
+.campagin .no1 span {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.campagin .no1 .asterisk {
+    font-size: 0.625rem;
+    font-weight: 100;
+}
+/* No1共通 */
+@media(min-width:768px) {
+    .campagin .no1 {
+        font-size: 2.5rem;
+    }
+
+    .campagin .no1 span {
+        font-size: 3.75rem;
+    }
+
+    .campagin .no1 .asterisk {
+        font-size: 0.75rem;
+    }
+}
+/* No1-左 */
+@media(min-width: 768px){
+    .campagin .no1-left{
+        padding-top: 1.31rem;
+        padding-left: 0.95rem;
+    }
+}
+/* No1-右 */
+@media(min-width: 768px){
+    .campagin .no1-right{
+        padding-top: 1.32rem;
+        padding-left: 0.2rem;    
+    }
+}
+
+
+/* キャンペーン上部-左右の画像 */
+.campagin-item-image {
+    width: 2.1rem;
+    height: auto;
+}
+
+@media(min-width:768px) {
+    .campagin-item-image {
+        width: 3rem;
+        text-align: left;
+    }
+}
+
+/* !!!!キャンペーン上部-画像!!! */
+/* キャンペーン上部-教室の左画像 */
+.right .classroom-left-item {
+    margin-left: 1.3rem;
+}
+@media(min-width: 768px){
+    .right .classroom-left-item{
+        margin-left: 1.2rem;
+    }
+}
+/* キャンペーン上部-教室の右画像 */
+@media(min-width: 768px){
+    .campagin .classroom-right-item{
+        margin-left: 0.69rem;
+    }
+}
+.campagin .lessons-left-item{
+    margin-left: 0.9rem;
+}
+/* キャンペーン上部-習い事の右画像 */
+@media(min-width: 768px){
+    .campagin .lessons-left-item{
+        margin-left: 1rem;
+    }
+}
+/* キャンペーン上部-習い事の右画像 */
+@media(min-width: 768px){
+    .campagin .lessons-right-item{
+
+    }
+}
+
+
+/* キャンペーン-期間限定のテキスト */
+.campagin-bottom .description {
+    text-align: center;
+    font-size: 1.25rem;
+}
+@media(min-width: 768px){
+    .campagin-bottom .description {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-left: 2.8rem;
+    }
+}
+
+/* キャンペーン下部-期間限定 */
+.campagin-bottom {
+    padding-top: 1rem;
+}
+@media(min-width: 768px){
+    .campagin-bottom{
+        padding-top: 0.4rem;
+    }
+}
+
+/* 左キャンペーン下部-期間限定のスラッシュ-サイズ・位置 */
+.campagin-bottom .description::before {
+    content: '';
+    position: absolute;
+    left: 31.7%;
+    bottom: 18.7rem;
+    display: inline-block;
+    width: 1.9rem;
+    height: 0.1rem;
+    background-color: #f11f8d;
+    transform: rotate(60deg);
+}
+@media(min-width: 768px){
+    .campagin-bottom .description::before{
+        left: 62.55%;
+        bottom: 27.5rem;
+    }
+}
+/* 右キャンペーン下部-期間限定のスラッシュ-サイズ・位置 */
+.campagin-bottom .description::after {
+    content: '';
+    position: absolute;
+    left: 60.4%;
+    bottom: 18.7rem;
+    display: inline-block;
+    width: 1.9rem;
+    height: 0.1rem;
+    background-color: #f11f8d;
+    transform: rotate(-60deg);
+}
+@media(min-width: 768px){
+    .campagin-bottom .description::after{
+        left: 72.25%;
+        bottom: 27.5rem;
+    }
+}
+
+/* キャンペーン-whiteボタン */
+.campagin-bottom .button-white{
+    margin-top: 0.3rem;
+}
+@media(min-width: 768px){
+    /* キャンペーン-whiteボタン */
+    .campagin-bottom .button-white{
+        font-size: 1.42rem;
+        margin-top: 1rem;
+        padding: 1rem 4.1rem;
+        left: 1.4rem;
+        border-radius: 3rem;
+    }
+    /* キャンペーン-whiteボタンについてる矢印 */
+    .campagin .bi-arrow-right-short{
+        right: 1rem;
+        top: 49.4%;
+    }
+}
+
+/* コース案内
+------------------------------------------ */
+/* セクションタイトル */
+.coruse .container .section-title {
+    margin-top: 4.38rem;
+    margin-bottom: 2.55rem;
+}
+@media(min-width: 768px){
+    .coruse .container .section-title{
+        
+    }
+}
+
+/* タブ周りの線を削除 */
+.st-theme-basic {
+    border: none;
+    /* タブ全体のサイズと中央への配置 */
+    width: 22.4rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* タブ配置について */
+.coruse .smarttab {
+    display: flex;
+}
+
+.coruse .container .tab-content {
+    height: 58.2rem !important;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #ffedcc;
+}
+
+/* タブの見た目 */
+.tab.st-theme-basic>.nav .nav-link {
+    padding-top: 1.15rem;
+    padding-bottom: 0.8rem;
+    /* line-height: 1; */
+    font-size: 1.2rem;
+    background-color: #d8d8d8;
+    color: #000;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.tab.st-theme-basic>.nav {
+    box-shadow: none;
+}
+
+.tab.st>.nav {
+    column-gap: 0.5rem;
+    flex-direction: row !important;
+}
+
+/* タブの中身の見た目 */
+.st>.tab-content>.tab-pane {
+    flex-flow: column;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+}
+
+/* タブの中身のテキストの見た目 */
+.tab.st-theme-basic>.nav .nav-link.active::after {
+    background-color: unset !important;
+}
+
+/* タブがアクティブの状態 */
+.tab.st-theme-basic>.nav .nav-link.active {
+    color: #fff !important;
+    background-color: #f2a118;
+    text-decoration: unset !important;
+}
+
+/* 中身の画像の見た目 */
+.coruse .coruse-tab-content-item img {
+    border-radius: 0.5rem;
+}
+
+/* 中身のテキストの見た目 */
+/* テキスト「タイトル」の見た目 */
+.coruse .coruse-tab-content-title {
+    font-size: 1.25rem;
+    margin-bottom: 1.85rem;
+    line-height: 1.7rem;
+}
+
+.coruse .coruse-tab-content-title-no3 {
+    font-size: 1.25rem;
+    margin-bottom: -0.26rem;
+    line-height: 1.9rem;
+}
+
+/* テキスト「年齢-サブタイトル」の見た目 */
+.coruse .coruse-tab-content-item .age-group {
+    font-size: 1rem;
+}
+
+
+/* 3つの特色
+------------------------------------------ */
+/* セクションタイトルの位置 */
+.point .section-title {
+    margin-top: 4.5rem;
+    margin-bottom: 2.69rem;
+    font-size: 1.4rem;
+}
+
+.point .section-title:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -0.75rem;
+    /*線の上下位置*/
+    display: inline-block;
+    width: 1.47rem;
+    /*線の長さ*/
+    height: 0.16rem;
+    /*線の太さ*/
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    /*位置調整*/
+    background-color: #0079f2;
+    /*線の色*/
+}
+
+/* アイテムの位置 */
+.point .point-item {
+    display: flex;
+    flex-flow: column;
+
+}
+
+/* 画像の見た目 */
+.point .container img {
+    border-radius: 0.5rem;
+    width: 92%;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+
+/* 説明文のフォント */
+.point .explanation {
+    margin-top: 0.65rem;
+    margin-left: 0.9rem;
+    margin-right: 1rem;
+    margin-bottom: 2.1rem;
+}
+
+/* 番号のフォント */
+.point .explanation .number {
+    font-size: 3.75rem;
+    font-style: italic;
+    line-height: 1;
+    font-weight: 700;
+    color: #46c017;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* テキストのフォント */
+.point .point-text {
+    font-size: 1.1rem;
+}
+
+/* 02テキストのフォント */
+.point .point-no2 .point-text {
+    font-size: 1.12rem;
+}
+
+/* pointのサマリー */
+.point-summary .container {
+    margin-top: 2.44rem;
+}
+
+/* 講師紹介
+------------------------------------------ */
+/* セクションタイトルの位置 */
+.introduction .section-title {
+    margin-top: 4.7rem;
+    margin-bottom: 2.52rem;
+}
+
+/* 各項目の位置およびサイズ */
+.introduction .teacher {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 1rem;
+    width: 19.4rem;
+    height: 23.2rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.56rem;
+}
+
+/* 画像の見た目 */
+.introduction .teacher img {
+    border-radius: 8.125rem;
+    width: 42%;
+}
+
+/* 文字サイズ・行間・見た目 */
+.introduction .teacher .name-carrer {
+    font-size: 1.125rem;
+    line-height: 1;
+    padding-top: 0.8rem;
+}
+
+.introduction .teacher .carrer {
+    font-size: 0.875rem;
+    line-height: 1;
+    padding-top: 0.98rem;
+}
+
+.introduction .teacher .comment {
+    margin-top: 1.2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-top: 0.4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0.8rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    text-align: left;
+}
+
+/* 教師の色と位置-1人目 */
+.introduction .teacher:nth-child(1) {
+    background-color: #ffeee5;
+}
+
+/* 教師の色と位置-2人目 */
+.introduction .teacher:nth-child(2) {
+    background-color: #fff6e5;
+}
+
+.introduction .teacher:nth-child(2) .comment {
+    padding-top: 0.6rem;
+}
+
+/* ページ読み込み直後にフェードイン要素を非表示にする */
+.animate__animated {
+    opacity: 0;
+}
+
+/* introductionのサマリー */
+.introduction-summary .container {
+    margin-top: 5.1rem;
+}
+
+
+/* 料金プラン
+------------------------------------------ */
+/* セクションタイトルの位置 */
+.plan .container .section-title {
+    margin-top: 4.4rem;
+    margin-bottom: 1.9rem;
+}
+
+/* 表全体の枠の色・位置 */
+table {
+    border: 0.1875rem solid #dddddd;
+    border-collapse: collapse;
+    /* 表のスペースを埋める */
+    margin: 0 auto;
+    width: 22.5rem;
+}
+
+table th,
+table td {
+    border: 0.0625rem solid #dddddd;
+}
+
+/* 各表の位置 */
+.plan .container .table-low {
+    margin-top: 0.7rem;
+}
+
+/* 表のタイトルの文字サイズ・位置 */
+.plan .table-title {
+    font-size: 1.25rem;
+    color: #333333;
+    margin-left: 1rem;
+}
+
+/* 表1行目の見た目 */
+table thead th {
+    font-size: 1rem;
+    color: #333333;
+    padding: 1rem;
+    padding-top: 0.9rem;
+    padding-left: 0.3rem;
+    line-height: 1;
+}
+
+table thead {
+    background-color: #f5f5f5;
+}
+
+/* プランの文字見た目 */
+.plan-name {
+    padding: 1rem;
+}
+
+/* 月額費用の見た目 */
+.plan .monthly-fee {
+    /* 1行目の文字列 */
+    font-size: 0.875rem;
+    color: #333333;
+}
+
+.plan .fee {
+    /* 料金部分 */
+    font-size: 2.019375rem;
+    /* 32.31px */
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+.plan .en {
+    /* 円 */
+    font-size: 0.88375rem;
+    font-weight: 100;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* 中書きの文字見た目 */
+.plan .notes {
+    font-size: 0.75rem;
+    color: #666666;
+    text-align: center;
+}
+
+
+/* よくあるご質問
+------------------------------------------ */
+
+/* セクションタイトルの位置 */
+.faq .container .section-title {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+/* Q&A枠・サイズ・色 */
+.faq .piece {
+    border: 0.125rem solid #f26618;
+    border-radius: 0.5rem;
+}
+
+/* 矢印ファビコンのサイズ・位置・色 */
+.faq .bi-caret-up-fill {
+    font-size: 1rem;
+    color: #f2a118;
+}
+
+/* Qアイコンの文字色・サイズ・位置・背景色 */
+.faq .icon-q {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 3.75rem;
+    height: 3.75rem;
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 700;
+    color: #f26618;
+    border-radius: 50%;
+    background-color: #ffeee5;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Aアイコンの文字色・サイズ・位置・背景色 */
+.faq .icon-a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 3.75rem;
+    height: 3.75rem;
+    margin-right: 3rem;
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 50%;
+    background-color: #f26618;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 質問枠内調整 */
+.faq .question {
+    display: flex;
+    align-items: start;
+}
+
+/* 質問テキストの調整 */
+.faq .accordion-title {
+    font-size: 1rem;
+    color: #333333;
+}
+
+/* 回答枠内調整 */
+.faq .answer {
+    display: flex;
+    background-color: #ffeee5;
+    align-items: start;
+    padding: 1rem;
+}
+
+/* 回答テキストの調整 */
+.faq .accordion-content {
+    font-size: 1rem;
+    color: #333333;
+}
+
+
+/* フッター
+------------------------------------------ */
+/* SNSリストの背景と配置 */
+.footer .footer-top {
+    background-color: #000000;
+
+}
+
+.footer .footer-sns-list-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SNSリストのアイコン-サイズ・詳細位置 */
+.footer .footer-sns-list-item a {
+    color: #fff;
+}
+
+.footer .footer-sns-list-item:not(:last-child) {
+    margin-right: 1rem;
+}
+
+/* footerロゴとコピーライトの位置 */
+.footer .footer-bottom {
+    text-align: center;
+}
+
+/* footerロゴの詳細位置とサイズ */
+.footer .footer-logo {
+    text-align: center;
+}
+
+/* コピーライトの詳細位置とサイズ */
+.footer .footer-copyright {
+    text-align: center;
+}
