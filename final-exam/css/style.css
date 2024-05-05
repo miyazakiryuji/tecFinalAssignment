@@ -270,6 +270,20 @@ img {
     font-size: 2rem;
 }
 
+/* コース案内 */
+.hamburger-course-information{
+    padding-right:0.09rem;
+}
+/* 特色 */
+.hamburger-features{}
+/* 講師紹介 */
+.hamburger-lecturer-introduction{}
+/* 料金プラン */
+.hamburger-rate-plan{}
+/* よくあるご質問 */
+.hamburger-faq{}
+
+
 /* ハンバーガーボタン  ピンクボタン　SNSボタン削除*/
 @media(min-width:768px) {
     .hamburger-button {
@@ -421,8 +435,9 @@ img {
     height: 3.35rem;
     left: 1.08rem;
     text-align: center;
-    padding-top: 0.35rem;
+    padding-top: 0.1587rem;
     padding-bottom: 0.35rem;
+    padding-right: 0.28rem;
     opacity: 80%;
     background-color: #fff;
     border-top-right-radius: 0.5rem;
@@ -443,7 +458,7 @@ img {
     left: 2rem;
     height: 3.35rem;
     text-align: center;
-    padding-top: 0.5rem;
+    padding-top: 0.6rem;
     padding-bottom: 0.4rem;
     padding-right: 1.1rem;
     padding-left: 0.71rem;
